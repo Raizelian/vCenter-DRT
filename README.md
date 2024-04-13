@@ -9,7 +9,7 @@ Tool that generates .csv files containing a list of useful information about vir
 
 The script gets the current state of a virtual machine (either powered on, or powered off) and, if `PoweredOff`, elaborates the date and time of that event; if it can't find any PoweredOff event then it looks for the `LastWriteTime` of the .nvram file of that virtual machine. The .nvram file is searched in every datastore linked to a VM and, if not present, one can suppose the VM was just imported and never powered on - or orphaned.
 
-The final result is the `poweredoff-vms_report-{vcenter}.csv` file containing all the gathered information.
+The final result is the `vms_report-{vcenter}.csv` file containing all the gathered information.
 
 
 ## Configuration
