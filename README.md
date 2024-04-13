@@ -43,3 +43,4 @@ Estimated wait times based on real use cases:
 - [X] Handle any name exclusion as needed, es. templates
 - [X] Import vCenter connection configuration from .ini
 - [ ] Add optional listing of datastores in basic info gathering
+- [ ] Add caching for optimization purposes
