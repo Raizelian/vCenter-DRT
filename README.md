@@ -7,8 +7,9 @@ Tool that generates .csv files containing a list of useful information about vir
 - Folder
 - PoweredOffTime (vcenter-drt-poweredoff.ps1)
 
-The basic script, vcenter-drt.ps1, gets the current state of a virtual machine (either powered on, or powered off) and reports on the information listed above.
-The vcenter-drt-poweredoff.ps1 script also evaluates the VM's power state and if found equal to `PoweredOff` then elaborates the date and time of that event; if it can't find any PoweredOff event then it looks for the `LastWriteTime` of the .nvram file of that virtual machine. The .nvram file is searched in every datastore linked to a VM and, if not present, one can suppose the VM was just imported and never powered on - or orphaned.
+The basic script, **vcenter-drt.ps1**, gets the current state of a virtual machine (either powered on, or powered off) and reports on the information listed above.
+
+The **vcenter-drt-poweredoff.ps1** script also evaluates the VM's power state and if found equal to `PoweredOff` then elaborates the date and time of that event; if it can't find any PoweredOff event then it looks for the `LastWriteTime` of the .nvram file of that virtual machine. The .nvram file is searched for in every datastore linked to a VM and, if not present, one can suppose the VM was just imported and never powered on - or orphaned.
 
 The final result is either the `vms_report-{vcenter}.csv` or `poweredoff-vms_report-{vcenter}.csv`  file containing all the gathered information.
 
